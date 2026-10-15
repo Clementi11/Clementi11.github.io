@@ -1,0 +1,14 @@
+<footer class="site-footer">
+  <div class="shell footer-inner">
+    <div>
+      <strong>{{ site.title }}</strong>
+      <p>持续记录，慢慢积累。</p>
+    </div>
+    <div class="footer-links">
+      <a href="{{ '/posts/' | relative_url }}">全部文章</a>
+      <a href="{{ '/projects/' | relative_url }}">项目</a>
+      {% if site.github_username != '' %}<a href="https://github.com/{{ site.github_username }}" rel="me noopener noreferrer" target="_blank">GitHub ↗</a>{% endif %}
+    </div>
+    <small>© {{ 'now' | date: '%Y' }} {{ site.author }}</small>
+  </div>
+</footer>

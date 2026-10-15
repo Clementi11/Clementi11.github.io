@@ -1,0 +1,22 @@
+---
+layout: default
+title: 文章
+description: 所有技术笔记和实践文章。
+permalink: /posts/
+---
+<div class="shell page-intro"><div class="eyebrow">THE ARCHIVE / 文章归档</div><h1>文章与笔记<span class="title-dot">.</span></h1><p>把遇到的问题、尝试过的方法和最终的收获整理在这里。</p></div>
+<section class="shell listing-section">
+  {% if site.posts.size > 0 %}
+  <div class="filter-bar"><label for="post-search">搜索文章</label><div class="search-wrap"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none"><circle cx="10.8" cy="10.8" r="6.8" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><input id="post-search" type="search" placeholder="输入标题或标签…" autocomplete="off"></div><span id="result-count" aria-live="polite">{{ site.posts.size }} 篇文章</span></div>
+  <div class="archive-list" id="post-list">
+    {% for post in site.posts %}
+    <a class="archive-item" href="{{ post.url | relative_url }}" data-search="{{ post.title | downcase | escape }} {{ post.description | downcase | escape }} {{ post.tags | join: ' ' | downcase | escape }}">
+      <div class="archive-date">{{ post.date | date: '%Y' }}<br><strong>{{ post.date | date: '%m.%d' }}</strong></div>
+      <div class="archive-main"><div class="card-tags">{% for tag in post.tags limit:3 %}<span>{{ tag }}</span>{% endfor %}</div><h2>{{ post.title }}</h2><p>{{ post.description | default: post.excerpt | strip_html | truncate: 120 }}</p></div>
+      <span class="archive-arrow" aria-hidden="true">↗</span>
+    </a>
+    {% endfor %}
+  </div>
+  <p id="no-results" class="no-results" hidden>没有找到匹配的文章，试试其他关键词。</p>
+  {% else %}<div class="empty-card">还没有文章。请在 <code>_posts</code> 文件夹中添加第一篇 Markdown 文章。</div>{% endif %}
+</section>

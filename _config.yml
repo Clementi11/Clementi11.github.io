@@ -1,0 +1,26 @@
+title: Flynn的个人博客
+description: 记录技术笔记、实践过程与值得分享的项目。
+author: Flynn
+email: ""
+url: "https://clementi11.github.io"
+baseurl: ""
+github_username: Clementi11
+
+lang: zh-CN
+timezone: Asia/Shanghai
+markdown: kramdown
+highlighter: rouge
+permalink: /posts/:title/
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
