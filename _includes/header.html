@@ -6,7 +6,6 @@
     </a>
     <nav class="main-nav" aria-label="主导航">
       <a href="{{ '/posts/' | relative_url }}" {% if page.url contains '/posts/' %}aria-current="page"{% endif %}>文章</a>
-      <a href="{{ '/projects/' | relative_url }}" {% if page.url == '/projects/' %}aria-current="page"{% endif %}>项目</a>
       <a href="{{ '/about/' | relative_url }}" {% if page.url == '/about/' %}aria-current="page"{% endif %}>关于</a>
     </nav>
     <button class="theme-toggle" type="button" aria-label="切换深浅色主题" title="切换主题">

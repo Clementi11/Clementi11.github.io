@@ -1,10 +1,9 @@
 title: Flynn的个人博客
-description: 记录技术笔记、实践过程与值得分享的项目。
+description: 记录技术笔记、学习心得与解决问题的过程。
 author: Flynn
 email: ""
 url: "https://clementi11.github.io"
 baseurl: ""
-github_username: Clementi11
 
 lang: zh-CN
 timezone: Asia/Shanghai
