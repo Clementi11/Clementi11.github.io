@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://clementi11.github.io/sitemap.xml
