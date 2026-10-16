@@ -9,4 +9,5 @@ tags: [捐赠]
 
 如果我的文章对你有帮助，可以请我喝一杯咖啡
 
+<img width="828" height="1124" alt="image" src="https://github.com/user-attachments/assets/5a5c0d79-2781-45e9-8e40-4d9d2223edfc" />
 
