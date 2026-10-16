@@ -4,7 +4,7 @@ layout: default
 <article class="shell article-page">
   <a class="back-link" href="{{ '/posts/' | relative_url }}">← 返回文章列表</a>
   <header class="article-head">
-    <div class="eyebrow">技术文章 <span class="eyebrow-line"></span> {{ page.date | date: '%Y.%m.%d' }}</div>
+    <div class="eyebrow">{% if page.pinned %}置顶文章{% else %}技术文章{% endif %} <span class="eyebrow-line"></span> {{ page.date | date: '%Y.%m.%d' }}</div>
     <h1>{{ page.title }}</h1>
     {% if page.description %}<p class="article-description">{{ page.description }}</p>{% endif %}
     {% if page.tags and page.tags.size > 0 %}
